@@ -1,0 +1,9 @@
+crew = Crew(
+    agents=[resume_parser, jd_parser, matcher],
+    tasks=[resume_task, jd_task, matching_task],
+    name="Resume-JD Matcher Crew",
+    description="A team to analyze resumes and match them to job descriptions.",
+    verbose=True,
+    process=Process.sequential
+)
+result = crew.kickoff()
